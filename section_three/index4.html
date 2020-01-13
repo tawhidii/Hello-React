@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--React Library-->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!--React DOM Library -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!--Babel Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <link rel="stylesheet" href="main2.css">
+    <title>React with CSS(styling - class componet)</title>
+</head>
+<body>
+<div id="app">React has not loded</div>
+
+
+<script type="text/babel">
+
+//Component class - Circle
+class Circle extends React.Component{
+
+    render(){
+        return(
+            <h1 className="circle">Circle</h1>
+        )
+    }
+}
+
+//Component class - Square
+class Square extends React.Component{
+
+render(){
+    return(
+        <h1 className="square">Square</h1>
+    )
+}
+}
+
+//Component class - Rectangle
+class Rectangle extends React.Component{
+
+render(){
+    return(
+        <h1 className="rectangle">Rectangle</h1>
+    )
+}
+}
+
+ReactDOM.render(
+//react what , react where
+<div>
+    <Circle/>
+    <Square/>
+    <Rectangle/>
+</div>,
+
+
+
+
+document.getElementById("app")
+
+
+
+
+);
+
+
+
+</script>
+
+</body>
+</html>

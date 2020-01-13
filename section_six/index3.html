@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <title>List to the DOM</title>
+  </head>
+  <body>
+    <div id="app">React has not rendered yet</div>
+    <script type="text/babel">
+      var siblings = [
+        { id: 1, name: "Chris", male: true },
+        { id: 2, name: "Jeff", male: true },
+        { id: 3, name: "Julie", female: true },
+        { id: 4, name: "Jessica", female: true }
+      ];
+      function FamilyList(props){
+        var femaleSiblings=props.siblings.filter(function(person){
+          return person.female
+        }).map(function(person){
+          return <div key={person.id}><h3>{person.name}</h3></div>
+        })
+        var maleSiblings = props.siblings.filter(function(person){
+          return person.male
+        }).map(function(person){
+          return <div key={person.id}><h3>{person.name}</h3></div>
+        })
+
+        return(
+          <div>
+            <h1>Female Siblings</h1>
+              <div>
+               {femaleSiblings}
+              </div>
+              <hr/>
+            <h1>Male Siblings</h1>
+              <div>
+                {maleSiblings}
+
+              </div>
+          </div>
+        )
+      }
+      ReactDOM.render(
+        <FamilyList
+          siblings={siblings}
+        />,
+        document.getElementById("app")
+      )
+    </script>
+  </body>
+</html>

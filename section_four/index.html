@@ -1,0 +1,151 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!--React Library-->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!--React DOM Library -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!--Babel Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+
+    <title>React with CSS(styling)</title>
+</head>
+<body>
+    <div id="app">No react here</div>
+
+
+<script type="text/babel">
+
+
+var ColorSpectrum = function(){
+    return(
+        <div>
+            <RedColor/>
+            <GreenColor/>
+            <YellowColor/>
+            <BlueColor/>
+            <OrangeColor/>
+            <VioletColor/>
+            <IndigoColor/>
+        </div>
+        
+    )
+}
+
+//Stateless function - Red
+var RedColor = function () {
+    //Styling object -Red
+    var redStyle = {
+        height: 50,
+        width: 150,
+        backgroundColor: "red"
+    }
+    return(
+        <h1 style={redStyle}>Red</h1>
+    )
+    
+}
+
+//Stateless function - Yellow
+var YellowColor = function () {
+    //Styling object -Yellow
+    var yellowStyle = {
+        height: 50,
+        width: 150,
+        backgroundColor: "yellow"
+    }
+    return(
+        <h1 style={yellowStyle}>Yellow</h1>
+    )
+    
+}
+//Stateless function - Green
+var GreenColor = function () {
+    //Styling object -Green
+    var greenStyle = {
+        height: 50,
+        width: 150,
+        backgroundColor:"green"
+    }
+    return(
+        <h1 style={greenStyle}>Green</h1>
+    )
+    
+}
+
+//Stateless function - Orange
+var OrangeColor = function () {
+    //Styling object -Orange
+    var orangeStyle={
+        height: 50,
+        width: 150,
+        backgroundColor:"orange"
+    }
+    return(
+        <h1 style={orangeStyle}>Orange</h1>
+    )
+    
+}
+
+//Stateless function - Blue
+var BlueColor = function () {
+    //Styling object -Blue
+    var blueStyle={
+        height: 50,
+        width: 150,
+        backgroundColor:"blue"
+    }
+    return(
+        <h1 style={blueStyle}>Blue</h1>
+    )
+    
+}
+
+//Stateless function - Violet
+var VioletColor = function () {
+    //Styling object - Violet
+    var styleViolet = {
+        height: 50,
+        width: 150,
+        backgroundColor:"violet"
+    }
+    return(
+        <h1 style={styleViolet}>Violet</h1>
+    )
+    
+}
+
+//Stateless function - Indigo
+var IndigoColor = function () {
+    //Styling object -Indigo
+    var indigoStyle={
+        height: 50,
+        width: 150,
+        backgroundColor:"indigo"
+    }
+    return(
+        <h1 style={indigoStyle}>Indigo</h1>
+    )
+    
+}
+
+
+
+ReactDOM.render(
+//react what , react where
+<ColorSpectrum/>,
+document.getElementById("app")
+);
+
+
+
+</script>
+
+</body>
+</html>

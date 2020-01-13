@@ -1,0 +1,42 @@
+
+
+* variables -->> properties
+
+* functions -->> methods
+
+//   OBJECT LITERAL NOTATIONS
+
+     var car = {
+                 wheels:4,
+                 color:'red',
+key
+property ---->>                    <<---- values
+variable          mpg:34,
+                  engine:1,
+                  gallons:12
+                    };
+
+
+
+//DOT NOTATIONS
+
+var car = {};
+
+object.property = value;
+
+car.wheels = 4 ;
+car.color = 'red';
+car.wheels = 4;
+car.mpg = 34;
+car.engine = 1;
+car.gallons = 12;
+
+
+// BRACKET NOTATIONS
+
+object['property'] = value;
+car['wheels'] = 4;
+car['color'] = 'red';
+car['mpg']=34;
+car['engine']=1;
+car['gallons']=12;

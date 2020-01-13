@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <title>React Ajax Request</title>
+  </head>
+  <body>
+    <div id="app">React has not rendered yet</div>
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor(props) {
+          super(props)
+          this.state = {
+            items: []
+          }
+        }
+
+        componentDidMount() {
+          fetch('https://swapi.co/api/people/')
+          //.then(function(response){
+          //  return response.json()
+          //});
+          .then(response => response.json())
+          .then(responseData => {
+            this.setState({
+              items: responseData.results
+            })
+          })
+          .catch(error => {
+            console.log('Fetching and parsing data error', error)
+          })
+        }
+
+        render(){
+          let items = this.state.items
+          console.log(items)
+          return(
+            <div>
+              {items.map(function(item) {
+                return <h4 key={item.name}>{item.name}has an eye color of{item.eye_color} and hair color is {item.hair_color}</h4>
+              })}
+            </div>
+          )
+        }
+      }
+
+      ReactDOM.render(
+        <App/>,
+        document.getElementById("app")
+      )
+    </script>
+  </body>
+</html>

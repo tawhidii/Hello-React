@@ -1,0 +1,43 @@
+<!--BOILER PLATE CODE-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--React Library-->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!--React DOM Library -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!--Babel Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <title>This is React practise</title>
+</head>
+<body>
+    <!--location for react content-->
+    <div id="app">React Not Rendered </div>
+
+    <!--Javascript-->
+    <script type="text/babel">
+    
+    //Render react to the dom - arguments (what react , where react)
+    //variable for jsx
+    var hello = <h1>This is the header</h1>
+    // variable for location
+    var destination = document.getElementById("app")
+
+    ReactDOM.render(
+        // react what - variable for jsx
+        hello,
+        // reac where - variable for with id "app"
+        destination
+    );
+    
+    </script>
+    
+</body>
+</html>

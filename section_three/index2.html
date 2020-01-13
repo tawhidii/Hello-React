@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--React Library-->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!--React DOM Library -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!--Babel Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>React with CSS(styling - class componet)</title>
+</head>
+<body>
+    <div id="app">React has not loded</div>
+
+
+<script type="text/babel">
+
+//Component class - Red
+class RedColor extends React.Component{
+
+    render(){
+        return(
+            <h1 className="red">Red</h1>
+        )
+    }
+}
+
+//Component class - Green
+class GreenColor extends React.Component{
+
+render(){
+    return(
+        <h1 className="green">Green</h1>
+    )
+}
+}
+
+//Component class - yellow
+class YellowColor extends React.Component{
+
+render(){
+    return(
+        <h1 className="yellow">Yellow</h1>
+    )
+}
+}
+
+//Component class - Blue
+class BlueColor extends React.Component{
+
+render(){
+    return(
+        <h1 className="blue">Blue</h1>
+    )
+}
+}
+
+//Component class - Orange
+class OrangeColor extends React.Component{
+
+render(){
+    return(
+        <h1 className="orange">Orange</h1>
+    )
+}
+}
+
+
+//Component class - Violet
+class VioletColor extends React.Component{
+
+render(){
+    return(
+        <h1 className="violet">Violet</h1>
+    )
+}
+}
+
+//Component class - Red
+class IndigoColor extends React.Component{
+
+render(){
+    return(
+        <h1 className="indigo">Indigo</h1>
+    )
+}
+}
+
+
+
+
+ReactDOM.render(
+//react what , react where
+<div>
+    <RedColor/>
+    <GreenColor/>
+    <YellowColor/>
+    <BlueColor/>
+    <OrangeColor/>
+    <VioletColor/>
+    <IndigoColor/>
+</div>,
+
+
+
+
+document.getElementById("app")
+
+
+
+
+);
+
+
+
+</script>
+
+</body>
+</html>

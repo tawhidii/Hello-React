@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--React Library-->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!--React DOM Library -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!--Babel Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <title>Class Component in React</title>
+</head>
+<body>
+
+<div id="app">React has not rendered here !! </div>
+
+<script type="text/babel">
+
+
+//Class Component React 
+class Shapes extends React.Component {
+    render(){
+        return(
+            <h1> Circle , Square , Triangle </h1>  
+    
+    )
+
+    }
+}
+
+
+
+ReactDOM.render(
+// React what , where
+
+<Shapes/>,
+
+document.getElementById("app")
+
+);
+
+
+</script>
+    
+</body>
+</html>

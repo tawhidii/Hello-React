@@ -1,0 +1,94 @@
+<!--BOILER PLATE CODE-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--React Library-->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!--React DOM Library -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!--Babel Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <title>Intro React State </title>
+</head>
+<body>
+
+    <div id="app">React Not Rendered </div>
+
+    <!--Javascript-->
+    <script type="text/babel">
+
+      // class GuessAge extends React.Component{
+      //   constructor(props) {
+      //     super(props);
+      //     this.state = {
+      //       age: "Guess My Age"
+      //     }
+      //     this.onButtonClick = this.onButtonClick.bind(this)
+      //   }
+      //   onButtonClick(){
+      //     this.setState({
+      //       age: 24
+      //     })
+      //   }
+      //   render(){
+      //     return(
+      //     <div>
+      //     <h1> Guessing Game </h1>
+      //     <h2>{this.state.age}</h2>
+      //     <button onClick={this.onButtonClick}>Reveal My Age</button>
+      //     </div>
+      //
+      //     )
+      //   }
+      // }
+
+      class GuessAge extends React.Component{
+        constructor(props) {
+          super(props);
+          this.state = {
+            age: "Guess My Age"
+          }
+          // this.onButtonClick = this.onButtonClick.bind(this)
+        }
+        onButtonClick(){
+          this.setState({
+            age: 24
+          })
+        }
+        render(){
+          return(
+          <div>
+          <h1> Guessing Game </h1>
+          <h2>{this.state.age}</h2>
+          <button onClick={this.onButtonClick.bind(this)}>Reveal My Age 1</button>
+          <button onClick={() => this.onButtonClick()}>Reveal My Age 2</button>
+
+          </div>
+
+          )
+        }
+      }
+
+
+
+    ReactDOM.render(
+
+
+
+        <GuessAge/>,
+
+        document.getElementById("app")
+
+    );
+
+    </script>
+
+</body>
+</html>

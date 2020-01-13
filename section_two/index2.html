@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--React Library-->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!--React DOM Library -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!--Babel Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <title>Stateless Component in React Js</title>
+
+</head>
+<body>
+<div id="app">React has not rendered here !!</div>
+
+
+<script type="text/babel">
+    // first stateless component functions
+
+    // Camel case for comfonent functions
+    // one return type
+    var ColorSpectrum = function(){
+
+        return(
+            <h1>Red , Blue , Green , Voilet , Orange , Yellow , Indigo </h1>
+        );
+    }
+
+
+    var EachColorInSpectrum = function(){
+        return(
+        <ul>
+            <li>Red</li>
+            <li>Blue</li>
+            <li>Green</li>
+            <li>Voilet</li>
+            <li>Orange</li>
+            <li>Yellow</li>
+            <li>Indigo</li>
+        </ul>
+
+
+        );
+    }
+
+
+    ReactDOM.render(
+        // react what , react where
+        // invoking Stateless component with closing tag
+            <div>
+            <ColorSpectrum/>
+            <EachColorInSpectrum/>
+            </div>,
+
+        
+    document.getElementById("app")
+  
+    );
+
+
+</script>
+
+</body>
+</html>

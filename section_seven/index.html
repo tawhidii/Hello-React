@@ -1,0 +1,56 @@
+<!--BOILER PLATE CODE-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--React Library-->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!--React DOM Library -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!--Babel Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <title>REACT EVENTS</title>
+</head>
+<body>
+
+    <div id="app">React Not Rendered </div>
+
+    <!--Javascript-->
+    <script type="text/babel">
+      class Note extends React.Component {
+        handleButtonEdit(){
+          alert("This function will edit a note")
+
+        }
+        handleButtonDelete(){
+          alert("This function will delete a note")
+        }
+      render(){
+        return(
+        <div>
+          <h1>Useless Note Taker</h1>
+          <button onClick={this.handleButtonEdit}>edit note</button>
+          <button onClick={this.handleButtonDelete}>delete</button>
+        </div>
+        )
+      }
+      }
+
+
+    ReactDOM.render(
+      <Note/>,
+
+        document.getElementById("app")
+
+    );
+
+    </script>
+
+</body>
+</html>

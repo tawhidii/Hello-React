@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--React Library-->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!--React DOM Library -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!--Babel Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <title>Practise Class Component React</title>
+</head>
+<body>
+    <div id="app">No react here</div>
+
+    <script type="text/babel">
+
+    //Class Component
+    class Intro extends React.Component{
+        render(){
+            return(
+                <h1>Here Is the list of Shapes</h1>
+            )
+        }
+    }
+
+
+    class ListShapes extends React.Component{
+        render(){
+            return(
+                <ul>
+                    <li>Circle</li>
+                    <li>Rectangle</li>
+                    <li>Square</li>
+                    <li>Triangle</li>
+                </ul>
+            )
+        }
+    }
+    
+
+
+
+
+    ReactDOM.render(
+        //react what , where
+        <div>
+            <Intro/>
+            <ListShapes/>
+        </div>,
+
+
+
+    document.getElementById("app")
+    )
+
+    </script>
+    
+</body>
+</html>

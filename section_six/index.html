@@ -1,0 +1,75 @@
+<!--BOILER PLATE CODE-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--React Library-->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!--React DOM Library -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!--Babel Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <title>ITERATING THROUGH LIST</title>
+</head>
+<body>
+
+    <div id="app">React Not Rendered </div>
+
+    <!--Javascript-->
+    <script type="text/babel">
+
+    //CREATING FamilyList Component
+    function FamilyList(props) {
+      // assign props.siblings to siblings variable to clean up code (optional)
+      var siblings = props.siblings
+      // use map
+
+      var siblingsListItem = siblings.map(function(person){
+        return <div key={props.id}>{person.name}</div>
+      })
+      return(
+      <div><h1>{siblingsListItem}</h1></div>
+
+      )
+
+    }
+    // Alternative FamilyList Component
+    // function FamilyList(props){
+    //   return(
+    //   <div>{props.siblings.map(function(person){
+    //
+    //     return <div key={props.id}>{person.name}</div>
+    //
+    //   })}</div>
+    //   )
+    // }
+
+      // ARRAY OF OBJECTS - 3 Props(ID , NAME , FEMALE)
+
+      var siblings = [
+              { id: 1, name: "Chris", female: false },
+              { id: 2, name: "Jeff", female: false },
+              { id: 3, name: "Julie", female: true },
+              { id: 4, name: "Jessica", female: true }
+]
+
+
+
+    ReactDOM.render(
+        <FamilyList
+        siblings = {siblings}/>,
+
+        document.getElementById("app")
+
+    );
+
+    </script>
+
+</body>
+</html>

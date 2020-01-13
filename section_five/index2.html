@@ -1,0 +1,63 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--React Library-->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!--React DOM Library -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!--Babel Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <title>Class Component props</title>
+</head>
+<body>
+
+    <div id="app">React Not Rendered </div>
+
+
+    <script type="text/babel">
+
+      class PersonGreetings extends React.Component {
+        render(){
+          var stylePerson = {
+            height: 300,
+            width:300,
+            backgroundColor: this.props.color
+          }
+          var textStyle = {
+          color: this.props.text
+          }
+          return(
+          <div style={stylePerson}>
+            <h1 style={textStyle}> Hello , {this.props.name}</h1>
+          </div>
+
+          )
+        }
+
+      }
+
+
+
+    ReactDOM.render(
+        <div>
+        <PersonGreetings color="black" name="tawhidi" text="lime"/>
+          <PersonGreetings color="red" name="sarah" text="white"/>
+        </div>,
+
+
+        document.getElementById("app")
+
+    );
+
+    </script>
+
+</body>
+</html>
